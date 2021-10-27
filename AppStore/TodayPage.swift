@@ -22,9 +22,9 @@ struct TodayView: View {
                             Image("profile").resizable().frame(width: 40, height: 40, alignment: .trailing)
                     })
                 }.padding([.leading, .trailing, .top])
-                HighlightView(catagory: "Puppy", title: "You know you want him,", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
-                HighlightView(catagory: "Puppy", title: "You know you want him,", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
-                HighlightView(catagory: "Puppy", title: "You know you want him,", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
+                HighlightView(catagory: "Puppy", title: "You know you want him", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
+                HighlightView(catagory: "Puppy", title: "You know you want him", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
+                HighlightView(catagory: "Puppy", title: "You know you want him", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
             }
         }
     }
