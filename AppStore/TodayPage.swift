@@ -21,8 +21,10 @@ struct TodayView: View {
                     Button(action: self.loadProfile, label: {
                             Image("profile").resizable().frame(width: 40, height: 40, alignment: .trailing)
                     })
-                }.padding()
-                HighlightView().frame(height: 500, alignment: .leading)
+                }.padding([.leading, .trailing, .top])
+                HighlightView(catagory: "Puppy", title: "You know you want him,", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
+                HighlightView(catagory: "Puppy", title: "You know you want him,", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
+                HighlightView(catagory: "Puppy", title: "You know you want him,", message: "Isn't a dog everyone's favorite friend").frame(height: 500, alignment: .leading)
             }
         }
     }
@@ -32,12 +34,24 @@ struct TodayView: View {
 }
 
 struct HighlightView: View {
+    var catagory : String
+    var title: String
+    var message: String
+    
     var body: some View {
         VStack {
             ZStack {
                 Image("puppy").resizable()
+                LinearGradient(gradient: Gradient(colors: [.clear, Color.black.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
+                
+                VStack(alignment: .leading) {
+                    Text(catagory).foregroundColor(Color.white.opacity(0.5)).bold()
+                    Text(title).foregroundColor(.white).font(Font.title).bold()
+                    Spacer()
+                    Text(message).foregroundColor(.white)
+                }.padding()
             }
-        }.cornerRadius(30).padding() 
+        }.cornerRadius(30).padding().shadow(radius: 4)
     }
 }
 
